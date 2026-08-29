@@ -16,11 +16,21 @@
   --font-heading: 'Orbitron', sans-serif;
   --font-main: "Comic Sans MS", "Comic Sans", cursive, sans-serif, sans-serif;
 
+  --color-bg: #5DAE68;
+  --color-text: #12201A;
+  --color-link: #0B2A12;
   --color-shadow: rgba(0, 0, 0, 0.25);
 }
 
+body:has(#theme-toggle:checked) {
+  --color-bg: #0E1B12;
+  --color-text: #EAF7E4;
+  --color-link: #6EE26B;
+  --color-shadow: rgba(110, 226, 107, 0.35);
+}
+
 body {
-  margin: 1;
+  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -113,6 +123,7 @@ main {
 }
 
 .project-display-name {
+  color: var(--color-link);
   text-decoration: none;
   display: inline-block;
   transition: transform 0.15s ease;
@@ -126,4 +137,35 @@ main {
 .contact {
   text-align: center;
   padding-block: var(--space-xs);
+}
+
+.contact-item {
+  color: var(--color-link);
+}
+
+.theme-toggle-input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.theme-toggle-label {
+  position: fixed;
+  top: var(--space-sm);
+  right: var(--space-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  font-size: 1.25rem;
+  cursor: pointer;
+  box-shadow: 0 0.5rem 1rem var(--color-shadow);
+}
+
+.theme-toggle-input:focus-visible ~ .theme-toggle-label {
+  outline: 0.15rem solid var(--color-link);
+  outline-offset: 0.15rem;
 }
