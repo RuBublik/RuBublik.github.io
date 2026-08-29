@@ -12,6 +12,11 @@
   --space-xl: 4rem;
 
   --content-max-width: 40rem;
+
+  --font-heading: 'Orbitron', sans-serif;
+  --font-main: "Comic Sans MS", "Comic Sans", cursive, sans-serif, sans-serif;
+
+  --color-shadow: rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -19,6 +24,8 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
 }
 
 header,
@@ -64,14 +71,17 @@ main {
 
 #intro-pronoun {
   font-size: 1rem;
+  font-style: italic;
 }
 
 #intro-bio {
   font-size: 1.2rem;
+  font-family: var(--font-main);
 }
 
 #intro-name {
   font-size: 2rem;
+  font-family: var(--font-heading);
 }
 
 #intro-photo {
@@ -79,13 +89,14 @@ main {
   height: 10rem;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.5rem 1rem var(--color-shadow);
   margin-bottom: var(--space-sm);
 }
 
 
 .projects {
   padding-block: var(--space-lg);
+  font-family: var(--font-main);
 }
 
 .projects-list {
