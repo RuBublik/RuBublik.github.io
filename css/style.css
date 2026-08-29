@@ -12,9 +12,10 @@
   --space-xl: 4rem;
 
   --content-max-width: 40rem;
+  --photo-size: 8rem;
 
   --font-heading: 'Orbitron', sans-serif;
-  --font-main: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  --font-main: 'Patrick Hand', sans-serif;
 
   --color-bg: #5DAE68;
   --color-text: #12201A;
@@ -50,10 +51,20 @@ footer {
 }
 
 header {
-  flex: 0 0 30vh;
+  flex: 0 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media (min-width: 48rem) {
+  header {
+    flex: 0 0 30vh;
+  }
+
+  :root {
+    --photo-size: 10rem;
+  }
 }
 
 main {
@@ -79,6 +90,10 @@ main {
   margin: 0;
 }
 
+#intro-role {
+  font-size: 1.1rem;
+}
+
 #intro-pronoun {
   font-size: 1rem;
   font-style: italic;
@@ -95,8 +110,8 @@ main {
 }
 
 #intro-photo {
-  width: 10rem;
-  height: 10rem;
+  width: var(--photo-size);
+  height: var(--photo-size);
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0.5rem 1rem var(--color-shadow);
