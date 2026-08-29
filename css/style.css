@@ -15,7 +15,7 @@
 }
 
 body {
-  margin: 0;
+  margin: 1;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -32,8 +32,19 @@ footer {
   padding-block: var(--space-md);
 }
 
+header {
+  flex: 0 0 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 main {
   flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  overflow-y: auto;
 }
 
 .intro {
@@ -41,8 +52,26 @@ main {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  gap: var(--space-sm);
-  padding-block: var(--space-xl) var(--space-lg);
+  gap: var(--space-xs);
+  padding-block: var(--space-xs);
+}
+
+.intro img,
+.intro h1,
+.intro p {
+  margin: 0;
+}
+
+#intro-pronoun {
+  font-size: 1rem;
+}
+
+#intro-bio {
+  font-size: 1.2rem;
+}
+
+#intro-name {
+  font-size: 2rem;
 }
 
 #intro-photo {
@@ -50,6 +79,8 @@ main {
   height: 10rem;
   object-fit: cover;
   border-radius: 50%;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  margin-bottom: var(--space-sm);
 }
 
 
@@ -83,5 +114,5 @@ main {
 
 .contact {
   text-align: center;
-  padding-block: var(--space-lg);
+  padding-block: var(--space-xs);
 }
